@@ -1,24 +1,9 @@
 import React, { Component } from 'react'
 import { NavBar, Icon } from 'antd-mobile';
-import { Link } from "react-router-dom";
 
-export default class reservation extends Component {
+export default class myinfo extends Component {
     render() {
         return (
-            <div>
-            <Link to={'/'}>
-
-                <NavBar
-                    mode="light"
-                    icon={<Icon type="left" />}
-                    onLeftClick={() => console.log('onLeftClick')}
-                    // rightContent={[
-                    //     <Icon key="0" type="search" style={{ marginRight: '16px' }} />,
-                    //     <Icon key="1" type="ellipsis" />,
-                    // ]}
-                >预约</NavBar>
-            </Link>
-
             <NavBar
                 mode="light"
                 icon={<Icon type="left" />}
@@ -31,8 +16,7 @@ export default class reservation extends Component {
                 //     <Icon key="0" type="search" style={{ marginRight: '16px' }} />,
                 //     <Icon key="1" type="ellipsis" />,
                 // ]}
-            >预约</NavBar>
-            </div>
+            >我的信息</NavBar>
         )
     }
 }

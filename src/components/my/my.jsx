@@ -1,32 +1,28 @@
 import React, { Component } from 'react'
-
+import { List } from 'antd-mobile';
+import { Link } from 'react-router-dom';
+const Item = List.Item;
 export default class my extends Component {
     render() {
         return (
 
             <div style={{ backgroundColor: 'white', height: '100%', textAlign: 'center' }}>
-
-                <div style={{ paddingTop: 60 }}>Clicked “1” tab， show “2” information</div>
-                <a style={{ display: 'block', marginTop: 40, marginBottom: 20, color: '#108ee9' }}
-                    onClick={(e) => {
-                        e.preventDefault();
-                        // this.setState({
-                        // hidden: !this.state.hidden,
-                        // });
-                    }}
-                >
-                    Click to show/hide tab-bar
-            </a>
-                <a style={{ display: 'block', marginBottom: 600, color: '#108ee9' }}
-                    onClick={(e) => {
-                        e.preventDefault();
-                        // this.setState({
-                        // fullScreen: !this.state.fullScreen,
-                        // });
-                    }}
-                >
-                    Click to switch fullscreen
-            </a>
+                <List renderHeader={() => 'Icon in the left'}>
+                    <Link to={'/myinfo'}>
+                        <Item
+                            thumb="https://zos.alipayobjects.com/rmsportal/dNuvNrtqUztHCwM.png"
+                            arrow="horizontal"
+                            onClick={() => { }}
+                        >My info</Item>
+                    </Link>
+                    <Item
+                        thumb="https://zos.alipayobjects.com/rmsportal/UmbJMbWOejVOpxe.png"
+                        onClick={() => { }}
+                        arrow="horizontal"
+                    >
+                        My Cost Ratio
+            </Item>
+                </List>
             </div>
         )
     }
