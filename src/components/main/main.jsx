@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { TabBar } from 'antd-mobile';
 import My from '../../components/my/my'
+import Menu from '../../components/reservation/menu'
 import Myindex from '../../components/index/index'
 
 
@@ -115,7 +116,7 @@ export default class main extends Component {
               });
             }}
           >
-            <My/>
+            <Menu/>
           </TabBar.Item>
           <TabBar.Item
             icon={{ uri: 'https://zos.alipayobjects.com/rmsportal/asJMfBrNqpMMlVpeInPQ.svg' }}

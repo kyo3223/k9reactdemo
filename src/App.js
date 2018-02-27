@@ -10,6 +10,7 @@ import 'antd-mobile/dist/antd-mobile.css';
 import { TabBar } from 'antd-mobile';
 // ReactDOM.render(<ButtonExample />, mountNode);
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Reservation from './components/reservation/reservation'
 
 
 import My from './components/my/my'
@@ -47,6 +48,8 @@ class App extends Component {
           <Route exact path="/about" component={About} />
           <Route exact path="/topics" component={Topics} />
           <Route exact path="/my" component={My} />
+          <Route exact path="/reservation" component={Reservation} />
+          
         </div>
       </Router>
       

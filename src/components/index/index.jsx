@@ -3,6 +3,7 @@ import { Carousel, WhiteSpace, WingBlank } from 'antd-mobile';
 import img1 from '../../asset/images/y_b.png';
 import img2 from '../../asset/images/y_c.png';
 import imglogo from '../../logo.svg';
+
 export default class index extends Component {
 
     constructor() {
@@ -32,7 +33,7 @@ export default class index extends Component {
                         style={{ display: 'inline-block', width: '100%', height: this.state.imgHeight }}
                     >
                         <img
-                            src={img1}
+                            src={imglogo}
                             alt=""
                             style={{ width: '100%', verticalAlign: 'top' }}
                             onLoad={() => {
@@ -48,7 +49,7 @@ export default class index extends Component {
                         style={{ display: 'inline-block', width: '100%', height: this.state.imgHeight }}
                     >
                         <img
-                            src={img2}
+                            src={imglogo}
                             alt=""
                             style={{ width: '100%', verticalAlign: 'top' }}
                             onLoad={() => {
