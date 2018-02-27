@@ -36,16 +36,6 @@ const Topics = () => (
   </div>
 );
 
-  const myReservation = () => {
-    //return <Reservation actions={actions}/>
-    
-    return <Reservation   history={history} />
-  }
-  const mymyinfo = () => {
-    //return <Reservation actions={actions}/>
-    
-    return <Myinfo   history={history} />
-  }
 class App extends Component {
   constructor() {
     super();
@@ -61,8 +51,8 @@ class App extends Component {
           <Route exact path="/about" component={About} />
           <Route exact path="/topics" component={Topics} />
           <Route exact path="/my" component={My} />
-          <Route exact path="/reservation" component={myReservation} />
-          <Route exact path="/myinfo" component={mymyinfo} />
+          <Route exact path="/reservation" component={()=><Reservation  history={history}/>} />
+          <Route exact path="/myinfo" component={()=><Myinfo  history={history}/>} />
           
         </div>
       </Router>
