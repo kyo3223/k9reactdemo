@@ -106,7 +106,7 @@ export default class main extends Component {
                 background: 'url(https://zos.alipayobjects.com/rmsportal/IIRLrXXrFAhXVdhMWgUI.svg) center center /  21px 21px no-repeat' }}
               />
             }
-            title="预约"
+            title="菜单"
             key="order"
             
             selected={this.state.selectedTab === 'greenTab'}

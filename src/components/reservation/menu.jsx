@@ -12,7 +12,7 @@ export default class menu extends Component {
     render() {
         return (
             <div className="flex-container">               
-                <div className="sub-title">预约</div>
+                <div className="sub-title">菜单</div>
                 <Grid data={data1}
                     columnNum={3}
                     renderItem={dataItem => (

@@ -7,7 +7,7 @@ export default class my extends Component {
         return (
 
             <div style={{ backgroundColor: 'white', height: '100%', textAlign: 'center' }}>
-                <List renderHeader={() => 'Icon in the left'}>
+                <List renderHeader={() => 'TEST TEST'}>
                     <Link to={'/myinfo'}>
                         <Item
                             thumb="https://zos.alipayobjects.com/rmsportal/dNuvNrtqUztHCwM.png"
