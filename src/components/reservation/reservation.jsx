@@ -31,7 +31,7 @@ export default class reservation extends Component {
                 //     <Icon key="0" type="search" style={{ marginRight: '16px' }} />,
                 //     <Icon key="1" type="ellipsis" />,
                 // ]}
-            >预约</NavBar>
+            >预约this.props.history.goBack</NavBar>
             </div>
         )
     }

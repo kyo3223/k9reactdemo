@@ -17,6 +17,11 @@ import My from './components/my/my'
 import Myinfo from './components/my/myinfo'
 import Main from './components/main/main'
 
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import reducer from './reducers';
+
+const store = createStore(reducer)
 const history = createBrowserHistory()
 
 const Home = () => (
@@ -44,19 +49,21 @@ class App extends Component {
 
   render() {
     return (
-      <Router history={history}>
-        <div>
+      <Provider store={store}>
+        <Router history={history}>
+          <div>
 
-          <Route exact path="/" component={Main} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/topics" component={Topics} />
-          <Route exact path="/my" component={My} />
-          <Route exact path="/reservation" component={()=><Reservation  history={history}/>} />
-          <Route exact path="/myinfo" component={()=><Myinfo  history={history}/>} />
-          
-        </div>
-      </Router>
-      
+            <Route exact path="/" component={Main} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/topics" component={Topics} />
+            <Route exact path="/my" component={My} />
+            <Route exact path="/reservation" component={() => <Reservation history={history} />} />
+            <Route exact path="/myinfo" component={() => <Myinfo history={history} />} />
+
+          </div>
+        </Router>
+
+      </Provider>
     );
   }
 }
