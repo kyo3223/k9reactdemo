@@ -12,7 +12,8 @@ const errorMessage = (state = null, action) => {
 
   return state
 }
-const setSelectedTab=(state,action)=>{
+const selectedTab=(state='',action)=>{
+  console.log('reducers',action)
   switch (action.type) {
     case ActionTypes.SET_TAB:
     return {
@@ -25,7 +26,7 @@ const setSelectedTab=(state,action)=>{
 }
 const rootReducer = combineReducers({
   errorMessage,
-  setSelectedTab
+  selectedTab
 })
 
 export default rootReducer

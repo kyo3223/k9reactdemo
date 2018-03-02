@@ -17,12 +17,9 @@ import My from './components/my/my'
 import Myinfo from './components/my/myinfo'
 import Main from './components/main/main'
 
-import { createStore } from 'redux';
 import { Provider,connect } from 'react-redux';
-import reducer from './reducers';
-import { setTab } from '../actions'
+import { setTab } from './actions'
 
-const store = createStore(reducer)
 const history = createBrowserHistory()
 
 const Home = () => (
@@ -54,7 +51,6 @@ class App extends Component {
   }
   render() {
     return (
-      <Provider store={store}>
         <Router history={history}>
           <div>
 
@@ -68,11 +64,11 @@ class App extends Component {
           </div>
         </Router>
 
-      </Provider>
     );
   }
 }
 const mapStateToProps = (state) => ({mytab:state})
 
 export default connect(mapStateToProps, {setTab})(App)
+// export default connect(mapStateToProps)(App)
 // export default App;

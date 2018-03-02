@@ -4,6 +4,7 @@ import My from '../../components/my/my'
 import Menu from '../../components/reservation/menu'
 import Myindex from '../../components/index/index'
 
+import { connect } from 'react-redux';
 
 class main extends Component {
   constructor() {
