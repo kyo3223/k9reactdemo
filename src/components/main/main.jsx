@@ -17,7 +17,9 @@ class main extends Component {
   }
 
   componentWillMount() {
-    console.log('test', this.props);
+    console.log('test', this.props.selectedTab);
+    this.setState({selectedTab:this.props.selectedTab})
+
   }
   // renderContent(pageText) {
   //     return (

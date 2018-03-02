@@ -47,7 +47,7 @@ class App extends Component {
 
   componentWillMount() {
     console.log('test_init',this.props);
-
+    this.props.setTab('greenTab')
   }
   render() {
     return (
