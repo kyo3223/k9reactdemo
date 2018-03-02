@@ -12,8 +12,8 @@ class myinfo extends Component {
                 onLeftClick={() => {
                     // window.location.href='/'
                     // this.props.history.push('/');
+                    this.props.setTab('yellowTab');
                     this.props.history.goBack();
-                    this.props.setTab('yellowTab')
 
                 }}
                 // rightContent={[

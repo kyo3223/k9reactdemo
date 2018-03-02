@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import { NavBar, Icon } from 'antd-mobile';
 import { Link } from "react-router-dom";
+import { setTab } from '../../actions'
+import {connect } from 'react-redux';
 
-export default class reservation extends Component {
+class reservation extends Component {
     render() {
         return (
             <div>
-            <Link to={'/'}>
+            <Link to={'/'} onClick={() => {this.props.setTab('greenTab'); }}>
 
                 <NavBar
                     mode="light"
@@ -25,6 +27,7 @@ export default class reservation extends Component {
                 onLeftClick={() => {
                     // window.location.href='/'
                     // this.props.history.push('/');
+                    this.props.setTab('greenTab');
                     this.props.history.goBack();
                 }}
                 // rightContent={[
@@ -36,3 +39,5 @@ export default class reservation extends Component {
         )
     }
 }
+
+export default connect((state) => (state), {setTab})(reservation)
