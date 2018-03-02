@@ -17,7 +17,7 @@ import My from './components/my/my'
 import Myinfo from './components/my/myinfo'
 import Main from './components/main/main'
 
-import { Provider,connect } from 'react-redux';
+import {connect } from 'react-redux';
 import { setTab } from './actions'
 
 const history = createBrowserHistory()
@@ -46,8 +46,9 @@ class App extends Component {
   }
 
   componentWillMount() {
-    console.log('test_init',this.props);
-    this.props.setTab('greenTab')
+    this.props.setTab('blueTab')
+    console.log(this.props)
+    
   }
   render() {
     return (
@@ -67,7 +68,7 @@ class App extends Component {
     );
   }
 }
-const mapStateToProps = (state) => ({mytab:state})
+const mapStateToProps = (state) => (state)
 
 export default connect(mapStateToProps, {setTab})(App)
 // export default connect(mapStateToProps)(App)

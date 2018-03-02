@@ -13,12 +13,10 @@ const errorMessage = (state = null, action) => {
   return state
 }
 const selectedTab=(state='',action)=>{
-  console.log('reducers',action)
+  // console.log('reducers',action)
   switch (action.type) {
     case ActionTypes.SET_TAB:
-    return {
-      tab:action.tab
-    }
+    return action.tab
     default:
     return state  // 没有匹配的action type，返回原来的state
   }

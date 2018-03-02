@@ -17,8 +17,13 @@ class main extends Component {
   }
 
   componentWillMount() {
-    console.log('test', this.props.selectedTab);
+    console.log('test', this.props);
     this.setState({selectedTab:this.props.selectedTab})
+
+  }
+  componentDidMount(){
+    console.log('test2', this.props);
+    // this.setState({selectedTab:this.props.selecte
 
   }
   // renderContent(pageText) {
@@ -93,6 +98,7 @@ class main extends Component {
               this.setState({
                 selectedTab: 'blueTab',
               });
+              console.log(this.props)
             }}
             data-seed="logId"
           >
@@ -147,5 +153,6 @@ class main extends Component {
     );
   }
 }
-const mapStateToProps = (state) => (state);
+// const mapStateToProps = (state) => (state);
+const mapStateToProps = (state) => (state)
 export default connect(mapStateToProps)(main)

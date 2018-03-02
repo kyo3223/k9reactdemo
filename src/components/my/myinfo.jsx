@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { NavBar, Icon } from 'antd-mobile';
+import {connect } from 'react-redux';
+import { setTab } from '../../actions'
 
-export default class myinfo extends Component {
+class myinfo extends Component {
     render() {
         return (
             <NavBar
@@ -11,6 +13,8 @@ export default class myinfo extends Component {
                     // window.location.href='/'
                     // this.props.history.push('/');
                     this.props.history.goBack();
+                    this.props.setTab('yellowTab')
+
                 }}
                 // rightContent={[
                 //     <Icon key="0" type="search" style={{ marginRight: '16px' }} />,
@@ -20,3 +24,6 @@ export default class myinfo extends Component {
         )
     }
 }
+// export default  myinfo
+
+export default connect((state) => (state), {setTab})(myinfo)
