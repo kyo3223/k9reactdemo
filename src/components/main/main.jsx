@@ -21,51 +21,6 @@ class main extends Component {
     this.setState({selectedTab:this.props.selectedTab})
 
   }
-  componentDidMount(){
-    console.log('test2', this.props);
-    // this.setState({selectedTab:this.props.selecte
-
-  }
-  // renderContent(pageText) {
-  //     return (
-  //     <div style={{ backgroundColor: 'white', height: '100%', textAlign: 'center' }}>
-  //         <div style={{ paddingTop: 60 }}>Clicked “{pageText}” tab， show “{pageText}” information</div>
-  //         <a style={{ display: 'block', marginTop: 40, marginBottom: 20, color: '#108ee9' }}
-  //         onClick={(e) => {
-  //             e.preventDefault();
-  //             this.setState({
-  //             hidden: !this.state.hidden,
-  //             });
-  //         }}
-  //         >
-  //         Click to show/hide tab-bar
-  //         </a>
-  //         <a style={{ display: 'block', marginBottom: 600, color: '#108ee9' }}
-  //         onClick={(e) => {
-  //             e.preventDefault();
-  //             this.setState({
-  //             fullScreen: !this.state.fullScreen,
-  //             });
-  //         }}
-  //         >
-  //         Click to switch fullscreen
-  //         </a>
-  //     </div>
-  //     );
-  // }
-  // renderContent2(pageText) {
-  //     return (
-  //     <div style={{ backgroundColor: 'white', height: '100%', textAlign: 'center' }}>
-  //         <Myindex/>
-  //     </div>
-  //     );
-  // }
-
-  // renderContent3(pageText) {
-  //     return (
-  //     <my/>
-  //     );
-  // }
   render() {
     return (
       <div style={this.state.fullScreen ? { position: 'fixed', height: '100%', width: '100%', top: 0 } : { height: 400 }}>
