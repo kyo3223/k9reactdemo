@@ -59,8 +59,8 @@ class App extends Component {
             <Route exact path="/about" component={About} />
             <Route exact path="/topics" component={Topics} />
             <Route exact path="/my" component={My} />
-            <Route exact path="/reservation" component={() => <Reservation history={history} />} />
-            <Route exact path="/myinfo" component={() => <Myinfo history={history} />} />
+            <Route exact path="/reservation" component={Reservation} />
+            <Route exact path="/myinfo" component={Myinfo} />
 
           </div>
         </Router>

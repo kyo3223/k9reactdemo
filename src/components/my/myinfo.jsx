@@ -10,10 +10,11 @@ class myinfo extends Component {
                 mode="light"
                 icon={<Icon type="left" />}
                 onLeftClick={() => {
-                    // window.location.href='/'
-                    // this.props.history.push('/');
+                    
+                    
                     this.props.setTab('yellowTab');
-                    this.props.history.goBack();
+                    this.props.history.push('/');
+                    // this.props.history.goBack();
 
                 }}
                 // rightContent={[

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 // const PlaceHolder = ({ className = '', ...restProps }) => (
 //     <div className={`${className} placeholder`} {...restProps}>Block</div>
 // );
-const data1 = Array.from(new Array(9)).map(() => ({
+const data1 = Array.from(new Array(29)).map(() => ({
     icon: 'https://gw.alipayobjects.com/zos/rmsportal/WXoqXTHrSnRcUwEaQgXJ.png',
 }));
 export default class menu extends Component {
